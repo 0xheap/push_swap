@@ -65,5 +65,12 @@ void	sort(t_stack **stack_a, t_stack **stack_b, t_data *s_numbers);
 void	sort_3(t_stack **stack);
 void	sort_2(t_stack **stack);
 void	sort_4(t_stack **stack_a, t_stack **stack_b);
+void	sort_5(t_stack **stack_a,t_stack **stack_b);
 
+// turk
+int	stack_size(t_stack	**stack);
+int find_max(t_stack *stack);
+int find_min(t_stack *stack);
+int	get_index(t_stack *stack, int value);
+int	find_target_position(t_stack *stack_b, int value);
 #endif

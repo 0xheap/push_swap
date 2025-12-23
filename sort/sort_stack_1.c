@@ -22,7 +22,7 @@ int	find_largest(t_stack **stack)
 	return (pos);
 }
 
-int	already(t_stack **stack)
+static int	already(t_stack **stack)
 {
 	int  f;
 	int	 s;

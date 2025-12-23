@@ -24,3 +24,20 @@ for a in 1 2 3 4; do
         done
     done
 done
+
+echo ""
+echo "=== Testing 5-number permutations ==="
+for a in 1 2 3 4 5; do
+    for b in 1 2 3 4 5; do
+        for c in 1 2 3 4 5; do
+            for d in 1 2 3 4 5; do
+                for e in 1 2 3 4 5; do
+                    if [ "$a" != "$b" ] && [ "$a" != "$c" ] && [ "$a" != "$d" ] && [ "$a" != "$e" ] && [ "$b" != "$c" ] && [ "$b" != "$d" ] && [ "$b" != "$e" ] && [ "$c" != "$d" ] && [ "$c" != "$e" ] && [ "$d" != "$e" ]; then
+                        echo -n "$a $b $c $d $e: "
+                        ./push_swap $a $b $c $d $e | ./checker_linux $a $b $c $d $e
+                    fi
+                done
+            done
+        done
+    done
+done

@@ -1,0 +1,48 @@
+PURPOSE:
+
+When you push an element from stack_a to stack_b, you want stack_b to stay sorted in descending order (biggest on top). This function tells you HOW MANY rotations stack_b needs before you can push.
+
+---
+
+Why descending order in stack_b?
+
+Because at the end, you'll push everything back to stack_a. If stack_b is descending (biggest on top), you just keep pushing and stack_a becomes ascending (smallest on top) = sorted!
+
+---
+
+The 3 cases explained:
+
+Case 1 & 2 - value is outside the range:
+
+stack_b = [8, 6, 4, 2]
+value = 10 (bigger than all) OR value = 1 (smaller than all)
+
+→ Rotate max (8) to top, then push.
+→ Why? Because 10 goes on top of 8 (new max), and 1 also goes on top of 8 (then sinks to bottom naturally as you push more).
+
+Both cases: return index of max.
+
+---
+
+Case 3 - value fits in the middle:
+
+stack_b = [8, 6, 4, 2]
+value = 5
+
+Where does 5 belong? Between 6 and 4.
+
+Loop through stack_b:
+- 8 > 5? Yes, continue
+- 6 > 5? Yes, continue  
+- 4 > 5? NO! 4 < 5 → STOP
+
+Return index 2 (position of 4).
+
+Rotate stack_b 2 times → [4, 2, 8, 6]
+Push 5 → [5, 4, 2, 8, 6]
+
+5 is now in front of 4, which is correct for descending!
+
+---
+
+Summary: The function finds the "slot" where value fits to maintain descending order, and returns how many rotations needed to open that slot.

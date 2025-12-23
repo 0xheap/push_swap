@@ -49,5 +49,7 @@ void	sort(t_stack **stack_a, t_stack **stack_b, t_data *s_numbers)
 		sort_2(stack_a);
 	if (s_numbers->count == 4)
 		sort_4(stack_a, stack_b);
+	if (s_numbers->count == 5)
+		sort_5(stack_a, stack_b);
 	return ;
 }

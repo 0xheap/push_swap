@@ -18,7 +18,7 @@ SRCS        = 	main.c\
 				$(addprefix $(PARSING_DIR)/, $(PARSING_SRC))\
 				$(addprefix $(STACK_DIR)/, $(STACK_SRC))\
 				operations/swap.c operations/push.c operations/rotate.c operations/reverse.c\
-			 	sort/sort_stack.c sort/sort_stack_1.c
+			 	sort/sort_stack.c sort/sort_stack_1.c sort/sort_5.c sort/turk.c sort/turk_utils.c
 
 OBJS        = $(SRCS:.c=.o)
 
