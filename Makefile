@@ -10,15 +10,21 @@ PARSING_SRC = 	any_double.c \
 		  		ft_split.c  ft_strlen.c  ft_substr.c \
 				range_validate.c  validate_chars.c  word_count.c
 
+STACK_DIR = stack
+STACK_SRC =	ft_lst_utils.c
+
 SRCS        = 	main.c\
 			  	validate_args.c\
-				$(addprefix $(PARSING_DIR)/, $(PARSING_SRC))
+				$(addprefix $(PARSING_DIR)/, $(PARSING_SRC))\
+				$(addprefix $(STACK_DIR)/, $(STACK_SRC))\
+				operations/swap.c operations/push.c operations/rotate.c operations/reverse.c\
+			 	sort/sort_stack.c sort/sort_stack_1.c
 
 OBJS        = $(SRCS:.c=.o)
 
 # Compiler flags (mandatory at 42)
 CC          = cc
-CFLAGS      = -Wall -Wextra -Werror
+CFLAGS      = -Wall -Wextra -Werror -g
 
 INCLUDES    = -I. -I$(PRINTF_DIR)
 

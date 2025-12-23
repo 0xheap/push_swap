@@ -28,7 +28,7 @@ char	**ft_split(char *str, char separator)
 	item_count = word_count(str, separator);
 	if (!item_count)
     	return (NULL);
-	items = malloc(sizeof(char **) * item_count + 1);
+	items = malloc(sizeof(char *) * (item_count + 1));
 	if (!items)
     	return (NULL);
 	pos = 0;

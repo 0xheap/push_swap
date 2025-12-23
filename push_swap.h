@@ -21,11 +21,12 @@ typedef struct	s_data
     int		count;           // Total count of numbers
 }	t_data;
 
-typedef struct stack
+
+typedef struct	stack
 {
 	int	value;
 	struct stack	*next;
-} t_stack;
+}	t_stack;
 
 
 // Parsing functions
@@ -42,4 +43,27 @@ size_t	count_total_nums(int ac, char **av);
 void	free_items(char **items, int item_count);
 // Main validation
 int	validate_args(int ac, char **av, t_data *s_numbers);
+
+// Stack Utils
+t_stack	*lstnew(int value);
+void	lst_add_front(t_stack **lst, t_stack *new_node);
+void	lst_add_back(t_stack **lst, t_stack *new_node);
+// Operations
+void	sa(t_stack **stack);
+void	sb(t_stack **stack);
+void	pa(t_stack **stack_a, t_stack **stack_b);
+void	pb(t_stack **stack_a, t_stack **stack_b);
+void	rra(t_stack **stack);
+void	rrb(t_stack **stack);
+void	rr(t_stack **stack_a, t_stack **stack_b);
+void	ss(t_stack **stack_a, t_stack **stack_b);
+void	rrr(t_stack **stackx, t_stack **stacky);
+void	rb(t_stack **stack);
+void	ra(t_stack **stack);
+// sort algo
+void	sort(t_stack **stack_a, t_stack **stack_b, t_data *s_numbers); 
+void	sort_3(t_stack **stack);
+void	sort_2(t_stack **stack);
+void	sort_4(t_stack **stack_a, t_stack **stack_b);
+
 #endif

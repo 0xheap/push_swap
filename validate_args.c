@@ -1,5 +1,4 @@
 # include "push_swap.h"
-#include <stdlib.h>
 
 static void fill_in(t_argval *s_parse , t_data *s_numbers, int *n)
 {
@@ -40,6 +39,7 @@ int	validate_args(int ac, char **av, t_data *s_numbers)
 	t_argval	s_parse;
 	int		i, (n);
 
+	s_parse = (t_argval){0};
 	i = 1;
 	n = 0;
 	validate_chars(&s_parse, ac, av);
