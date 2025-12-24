@@ -43,13 +43,14 @@ void	sort_2(t_stack **stack)
 
 void	sort(t_stack **stack_a, t_stack **stack_b, t_data *s_numbers)
 {
-	if (s_numbers->count == 3)
-		sort_3(stack_a);
 	if (s_numbers->count == 2)
 		sort_2(stack_a);
-	if (s_numbers->count == 4)
+	else if (s_numbers->count == 3)
+		sort_3(stack_a);
+	else if (s_numbers->count == 4)
 		sort_4(stack_a, stack_b);
-	if (s_numbers->count == 5)
+	else if (s_numbers->count == 5)
 		sort_5(stack_a, stack_b);
-	return ;
+	else if (s_numbers->count > 5)
+		turk(stack_a, stack_b);
 }

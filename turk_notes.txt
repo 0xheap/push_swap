@@ -46,3 +46,88 @@ Push 5 → [5, 4, 2, 8, 6]
 ---
 
 Summary: The function finds the "slot" where value fits to maintain descending order, and returns how many rotations needed to open that slot.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------
+
+
+
+
+
+
+
+
+
+/*
+** TURK ALGORITHM - GUIDE DYALEK
+** ═══════════════════════════════════════════════════════════════
+**
+** PHASE 1: Push 2 elements l B
+** ─────────────────────────────
+** - Just pb, pb
+** - Simple!
+**
+**
+** PHASE 2: Push cheapest 7ta A yb9a 3ndo 3
+** ─────────────────────────────────────────
+** Khassek hadi:
+**
+** 1. get_cost(index, size)
+**    - Ila index <= size/2 → return index (use ra)
+**    - Ila index > size/2 → return size - index (use rra)
+**
+** 2. find_cheapest(a, b)
+**    - Loop 3la GA3 elements f A
+**    - L kol element: 
+**      * idx_a = position dyalo f A
+**      * idx_b = find_target_position(b, value)
+**      * cost = get_cost(idx_a) + get_cost(idx_b)
+**    - Return element li 3ndo MINIMUM cost
+**
+** 3. do_rotations(a, b, idx_a, idx_b)
+**    - Rotate A w B bach element w target ywslo TOP
+**    - OPTIMIZATION: ila same direction, use rr/rrr
+**
+** 4. push_to_b(a, b)
+**    - L9a cheapest
+**    - Do rotations
+**    - pb
+**
+**
+** PHASE 3: Sort 3 f A
+** ───────────────────
+** - Just call sort_3(a)
+**
+**
+** PHASE 4: Push kolchi men B l A
+** ──────────────────────────────
+** - While B mashi khawi:
+**   * L9a target f A (use find_target_in_a)
+**   * Rotate A bach target ywsel TOP
+**   * pa
+**
+**
+** PHASE 5: Final rotation
+** ───────────────────────
+** - L9a MIN f A
+** - Rotate bach MIN ywsel TOP
+**
+**
+** ═══════════════════════════════════════════════════════════════
+** START CODING HERE!
+** ═══════════════════════════════════════════════════════════════
+*/

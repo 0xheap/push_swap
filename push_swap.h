@@ -73,4 +73,7 @@ int find_max(t_stack *stack);
 int find_min(t_stack *stack);
 int	get_index(t_stack *stack, int value);
 int	find_target_position(t_stack *stack_b, int value);
+int	find_target_in_a(t_stack *stack_a, int value);
+int	get_cost(int index, int size);
+void	turk(t_stack **a, t_stack **b);
 #endif
