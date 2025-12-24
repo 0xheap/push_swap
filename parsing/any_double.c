@@ -1,8 +1,7 @@
-# include "../push_swap.h"
+#include "../push_swap.h"
 
 void	ft_any_double(t_argval *s_parse, t_data *s_numbers)
 {
-
 	int i, (j);
 	i = 0;
 	while (i < s_numbers->count)

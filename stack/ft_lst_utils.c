@@ -1,16 +1,15 @@
-# include "../push_swap.h"
-#include <stdio.h>
+#include "../push_swap.h"
 
 t_stack	*lstnew(int value)
 {
 	t_stack	*node;
-	
+
 	node = malloc(sizeof(t_stack));
 	if (!node)
 		return (NULL);
 	node->value = value;
 	node->next = NULL;
-	return node;
+	return (node);
 }
 
 void	lst_add_front(t_stack **lst, t_stack *new_node)
@@ -23,8 +22,8 @@ void	lst_add_front(t_stack **lst, t_stack *new_node)
 
 void	lst_add_back(t_stack **lst, t_stack *new_node)
 {
-	t_stack	*last;
-	
+	t_stack *last;
+
 	if (!new_node)
 		return ;
 	if (!*lst)
@@ -33,7 +32,7 @@ void	lst_add_back(t_stack **lst, t_stack *new_node)
 		return ;
 	}
 	last = *lst;
-	while (last->next != NULL) 
+	while (last->next != NULL)
 	{
 		last = last->next;
 	}

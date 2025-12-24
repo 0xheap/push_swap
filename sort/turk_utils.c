@@ -5,11 +5,11 @@
 ** stack_size: Count chal element f stack
 ** Return: number of nodes f stack
 */
-int	stack_size(t_stack	**stack)
+int	stack_size(t_stack **stack)
 {
-	int	size;
+	int		size;
 	t_stack	*tmp;
-	
+
 	tmp = *stack;
 	size = 0;
 	while (tmp)
@@ -24,12 +24,13 @@ int	stack_size(t_stack	**stack)
 ** find_min: L9a SMALLEST value f stack
 ** Return: smallest number
 */
-int find_min(t_stack *stack)
+int	find_min(t_stack *stack)
 {
 	int	min;
-	
+
 	min = stack->value;
-	while (stack) {
+	while (stack)
+	{
 		if (stack->value < min)
 			min = stack->value;
 		stack = stack->next;
@@ -41,12 +42,13 @@ int find_min(t_stack *stack)
 ** find_max: L9a BIGGEST value f stack
 ** Return: biggest number
 */
-int find_max(t_stack *stack)
+int	find_max(t_stack *stack)
 {
 	int	max;
-	
+
 	max = stack->value;
-	while (stack) {
+	while (stack)
+	{
 		if (stack->value > max)
 			max = stack->value;
 		stack = stack->next;
@@ -60,7 +62,7 @@ int find_max(t_stack *stack)
 */
 int	get_index(t_stack *stack, int value)
 {
-	int pos;
+	int	pos;
 
 	pos = 0;
 	while (stack)

@@ -1,18 +1,19 @@
-# include "push_swap.h"
+#include "push_swap.h"
 
-static void fill_in(t_argval *s_parse , t_data *s_numbers, int *n)
+static void	fill_in(t_argval *s_parse, t_data *s_numbers, int *n)
 {
 	if (!s_numbers->numbers || !n)
-		return;
+		return ;
 	s_numbers->numbers[*n] = s_parse->value;
 	*n += 1;
 }
 
-static int ft_split_atoi(t_argval *s_parse, char *str, t_data *s_numbers, int *n)
+static int	ft_split_atoi(t_argval *s_parse, char *str, t_data *s_numbers,
+		int *n)
 {
-	char **args;
-	int size;
-	int i;
+	char	**args;
+	int		size;
+	int		i;
 
 	size = word_count(str, ' ');
 	args = ft_split(str, ' ');
@@ -37,8 +38,8 @@ static int ft_split_atoi(t_argval *s_parse, char *str, t_data *s_numbers, int *n
 int	validate_args(int ac, char **av, t_data *s_numbers)
 {
 	t_argval	s_parse;
-	int		i, (n);
 
+	int i, (n);
 	s_parse = (t_argval){0};
 	i = 1;
 	n = 0;

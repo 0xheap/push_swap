@@ -76,4 +76,8 @@ int	find_target_position(t_stack *stack_b, int value);
 int	find_target_in_a(t_stack *stack_a, int value);
 int	get_cost(int index, int size);
 void	turk(t_stack **a, t_stack **b);
+// free
+void	free_stack(t_stack **stack);
+void	free_data(t_data *data);
+void	free_all(t_stack **a, t_stack **b, t_data *data);
 #endif

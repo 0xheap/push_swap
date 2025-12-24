@@ -1,15 +1,15 @@
-# include "../push_swap.h"
+#include "../push_swap.h"
 
 int	find_largest(t_stack **stack)
 {
 	t_stack	*current;
 
-	int	pos, (i), (record);
+	int pos, (i), (record);
 	current = *stack;
 	i = 0;
 	pos = 0;
 	record = current->value;
-	while (current) 
+	while (current)
 	{
 		if (current->value > record)
 		{
@@ -24,11 +24,11 @@ int	find_largest(t_stack **stack)
 
 static int	already(t_stack **stack)
 {
-	int  f;
-	int	 s;
-	int	 t;
-	int	 l;
-	
+	int	f;
+	int	s;
+	int	t;
+	int	l;
+
 	f = (*stack)->value;
 	s = (*stack)->next->value;
 	t = (*stack)->next->next->value;
@@ -40,7 +40,7 @@ static int	already(t_stack **stack)
 
 void	sort_4(t_stack **stack_a, t_stack **stack_b)
 {
-	int pos;
+	int	pos;
 
 	if (already(stack_a))
 		return ;
@@ -52,7 +52,7 @@ void	sort_4(t_stack **stack_a, t_stack **stack_b)
 		pa(stack_a, stack_b);
 		ra(stack_a);
 	}
-	else if (pos == 1) 
+	else if (pos == 1)
 	{
 		ra(stack_a);
 		pb(stack_a, stack_b);
@@ -60,7 +60,7 @@ void	sort_4(t_stack **stack_a, t_stack **stack_b)
 		pa(stack_a, stack_b);
 		ra(stack_a);
 	}
-	else if (pos == 2) 
+	else if (pos == 2)
 	{
 		ra(stack_a);
 		ra(stack_a);
@@ -69,7 +69,7 @@ void	sort_4(t_stack **stack_a, t_stack **stack_b)
 		pa(stack_a, stack_b);
 		ra(stack_a);
 	}
-	else if (pos == 3) 
+	else if (pos == 3)
 	{
 		rra(stack_a);
 		pb(stack_a, stack_b);

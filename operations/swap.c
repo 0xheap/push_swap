@@ -1,11 +1,11 @@
-# include "../push_swap.h"
+#include "../push_swap.h"
 
 static void	swap(t_stack **stack)
 {
 	t_stack	*node1;
 	t_stack	*node2;
 	t_stack	*tmp;
-	
+
 	if (!*stack || !(*stack)->next)
 		return ;
 	node1 = *stack;

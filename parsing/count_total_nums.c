@@ -1,11 +1,11 @@
-# include "../push_swap.h"
+#include "../push_swap.h"
 #include <stddef.h>
 #include <stdlib.h>
 
 size_t	count_total_nums(int ac, char **av)
 {
 	size_t	total;
-	int	i;
+	int		i;
 
 	total = 0;
 	i = 1;
@@ -14,6 +14,5 @@ size_t	count_total_nums(int ac, char **av)
 		total += word_count(av[i], ' ');
 		i++;
 	}
-
 	return (total);
 }

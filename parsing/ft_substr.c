@@ -1,19 +1,19 @@
-# include "../push_swap.h"
+#include "../push_swap.h"
 
-char    *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-    char    *sub;
-    size_t  i;
+	char	*sub;
+	size_t	i;
 
-    sub = (char *)malloc(len + 1);
-    if (!sub)
-        return (NULL);
-    i = 0;
-    while (i < len)
-    {
-        sub[i] = s[start + i];
-        i++;
-    }
-    sub[i] = '\0';
-    return (sub);
+	sub = (char *)malloc(len + 1);
+	if (!sub)
+		return (NULL);
+	i = 0;
+	while (i < len)
+	{
+		sub[i] = s[start + i];
+		i++;
+	}
+	sub[i] = '\0';
+	return (sub);
 }

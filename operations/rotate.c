@@ -1,24 +1,24 @@
-# include "../push_swap.h"
+#include "../push_swap.h"
 
 static void	rotate(t_stack **stack)
 {
-    t_stack *head;
-    t_stack *second;
-    t_stack *tail;
-    t_stack *current;
+	t_stack	*head;
+	t_stack	*second;
+	t_stack	*tail;
+	t_stack	*current;
 
-    if (!*stack || !(*stack)->next)
-        return;
-    head = *stack;
-    current = *stack;
-    second = head->next;
-    *stack = second;
-    while ((current = current->next))
-    {
-        tail = current;
-    }
-    tail->next = head;
-    head->next = NULL;
+	if (!*stack || !(*stack)->next)
+		return ;
+	head = *stack;
+	current = *stack;
+	second = head->next;
+	*stack = second;
+	while ((current = current->next))
+	{
+		tail = current;
+	}
+	tail->next = head;
+	head->next = NULL;
 }
 
 void	ra(t_stack **stack)

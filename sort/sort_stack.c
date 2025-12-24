@@ -1,13 +1,11 @@
-# include "../push_swap.h"
+#include "../push_swap.h"
 
 void	sort_3(t_stack **stack)
 {
 	int a, (b), (c);
-
 	a = (*stack)->value;
 	b = (*stack)->next->value;
 	c = (*stack)->next->next->value;
-
 	if (a < b && b < c)
 		return ;
 	if (a > b && b < c && a < c)
@@ -26,20 +24,21 @@ void	sort_3(t_stack **stack)
 	}
 	else if (a < b && b > c && a > c)
 		rra(stack);
-	return;
+	return ;
 }
 
 void	sort_2(t_stack **stack)
 {
-	int first = (*stack)->value;
-	int second = (*stack)->next->value;
+	int	first;
+	int	second;
 
+	first = (*stack)->value;
+	second = (*stack)->next->value;
 	if (first < second)
 		return ;
 	else if (first > second)
 		sa(stack);
 }
-
 
 void	sort(t_stack **stack_a, t_stack **stack_b, t_data *s_numbers)
 {
