@@ -1,15 +1,5 @@
 #include "../push_swap.h"
 
-// Had FUnction Kadir return l how many on which operation i should use
-// if it return a vlaue that is bigger then size / 2 use rra
-// else use ra becuse its on the half top of it
-int	get_cost(int index, int size)
-{
-	if (index <= (size / 2))
-		return (index);
-	return (size - index);
-}
-
 void	get_dir_cost(int idx, int size, int *dir, int *cost)
 {
 	if (idx <= size / 2)
@@ -81,13 +71,9 @@ static int	calc_total_cost(int idx_a, int idx_b, int size_a, int size_b)
 
 int	find_cheapest(t_stack *a, t_stack *b)
 {
-	int		cheapest;
-	int		cost;
-	int		min_cost;
-	int		idx_a;
-	int		idx_b;
 	t_stack	*tmp;
 
+	int		cheapest, (cost), (min_cost), (idx_a), (idx_b);
 	tmp = a;
 	min_cost = 2147483647;
 	cheapest = tmp->value;

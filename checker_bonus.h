@@ -33,6 +33,7 @@ void	ft_atoi(t_argval *s_parse, char *str);
 void	validate_chars(t_argval *s_parse, int ac, char **av);
 int		ft_int_range(long result);
 void	ft_any_double(t_argval *s_parse, t_data *s_numbers);
+void	is_legal(t_argval *s_parce, char *operation);
 // String utilities
 char	**ft_split(char *str, char separator);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
@@ -59,21 +60,8 @@ void	ss(t_stack **stack_a, t_stack **stack_b);
 void	rrr(t_stack **stackx, t_stack **stacky);
 void	rb(t_stack **stack);
 void	ra(t_stack **stack);
-// sort algo
-void	sort(t_stack **stack_a, t_stack **stack_b, t_data *s_numbers); 
-void	sort_3(t_stack **stack);
-void	sort_2(t_stack **stack);
-void	sort_4(t_stack **stack_a, t_stack **stack_b);
-void	sort_5(t_stack **stack_a,t_stack **stack_b);
-
-// turk
-int	stack_size(t_stack	**stack);
-int find_max(t_stack *stack);
-int find_min(t_stack *stack);
-int	get_index(t_stack *stack, int value);
-int	find_target_position(t_stack *stack_b, int value);
-int	find_target_in_a(t_stack *stack_a, int value);
-void	turk(t_stack **a, t_stack **b);
+char	*read_operations(int fd);
+void	execute(t_stack **a, t_stack **b, char *op);
 // free
 void	free_stack(t_stack **stack);
 void	free_data(t_data *data);

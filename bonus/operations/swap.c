@@ -1,4 +1,4 @@
-#include "../push_swap.h"
+#include "../../checker_bonus.h"
 
 static void	swap(t_stack **stack)
 {
@@ -19,18 +19,15 @@ static void	swap(t_stack **stack)
 void	sa(t_stack **stack)
 {
 	swap(stack);
-	message(1, "sa\n");
 }
 
 void	sb(t_stack **stack)
 {
 	swap(stack);
-	message(1, "sb\n");
 }
 
 void	ss(t_stack **stack_a, t_stack **stack_b)
 {
 	swap(stack_a);
 	swap(stack_b);
-	message(1, "ss\n");
 }

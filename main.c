@@ -1,7 +1,5 @@
-#include "ft_printf/ft_printf.h"
 #include "push_swap.h"
-#include <stdio.h>
-#include <stdlib.h>
+
 
 int	main(int ac, char **av)
 {
@@ -16,7 +14,7 @@ int	main(int ac, char **av)
 		return (1);
 	if (!validate_args(ac, av, &s_numbers))
 	{
-		ft_printf("%s\n", "Error");
+		message(2, "Error\n");
 		return (1);
 	}
 	i = 0;

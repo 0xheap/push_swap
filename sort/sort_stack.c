@@ -1,5 +1,17 @@
 #include "../push_swap.h"
 
+
+int is_sorted(t_stack *stack)
+{
+    while (stack && stack->next)
+    {
+        if (stack->value > stack->next->value)
+            return (0);
+        stack = stack->next;
+    }
+    return (1);
+}
+
 void	sort_3(t_stack **stack)
 {
 	int a, (b), (c);
@@ -42,6 +54,8 @@ void	sort_2(t_stack **stack)
 
 void	sort(t_stack **stack_a, t_stack **stack_b, t_data *s_numbers)
 {
+	if (is_sorted(*stack_a))
+        return ;
 	if (s_numbers->count == 2)
 		sort_2(stack_a);
 	else if (s_numbers->count == 3)

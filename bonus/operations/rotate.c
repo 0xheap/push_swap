@@ -1,4 +1,4 @@
-#include "../push_swap.h"
+#include "../../checker_bonus.h"
 
 static void	rotate(t_stack **stack)
 {
@@ -24,18 +24,15 @@ static void	rotate(t_stack **stack)
 void	ra(t_stack **stack)
 {
 	rotate(stack);
-	message(1, "ra\n");
 }
 
 void	rb(t_stack **stack)
 {
 	rotate(stack);
-	message(1, "rb\n");
 }
 
 void	rr(t_stack **stack_a, t_stack **stack_b)
 {
 	rotate(stack_a);
 	rotate(stack_b);
-	message(1, "rr\n");
 }

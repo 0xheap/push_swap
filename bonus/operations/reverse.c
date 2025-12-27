@@ -1,4 +1,4 @@
-#include "../push_swap.h"
+#include "../../checker_bonus.h"
 
 static void	reverse(t_stack **stack)
 {
@@ -23,18 +23,15 @@ static void	reverse(t_stack **stack)
 void	rra(t_stack **stack)
 {
 	reverse(stack);
-	message(1, "rra\n");
 }
 
 void	rrb(t_stack **stack)
 {
 	reverse(stack);
-	message(1, "rrb\n");
 }
 
 void	rrr(t_stack **stackx, t_stack **stacky)
 {
 	reverse(stackx);
 	reverse(stacky);
-	message(1, "rrr\n");
 }
